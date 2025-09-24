@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#f0f0f0"
+    tools:context=".MainActivity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Calculator App"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333" />
+
+    <!-- First Number Input -->
+    <EditText
+        android:id="@+id/editTextNumber1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="30dp"
+        android:hint="Enter first number"
+        android:inputType="numberDecimal"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Second Number Input -->
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNumber1"
+        android:layout_marginTop="20dp"
+        android:hint="Enter second number"
+        android:inputType="numberDecimal"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text" />
+
+    <!-- Operation Buttons Container -->
+    <LinearLayout
+        android:id="@+id/operationButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNumber2"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Addition Button -->
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="+"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white" />
+
+        <!-- Subtraction Button -->
+        <Button
+            android:id="@+id/buttonSubtract"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="-"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:backgroundTint="#FF9800"
+            android:textColor="@android:color/white" />
+
+        <!-- Multiplication Button -->
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="×"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:backgroundTint="#2196F3"
+            android:textColor="@android:color/white" />
+
+        <!-- Division Button -->
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="÷"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:backgroundTint="#9C27B0"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <!-- Equals Button -->
+    <Button
+        android:id="@+id/buttonEquals"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/operationButtonsLayout"
+        android:layout_marginTop="20dp"
+        android:text="="
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:backgroundTint="#F44336"
+        android:textColor="@android:color/white" />
+
+    <!-- Result Display -->
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonEquals"
+        android:layout_marginTop="30dp"
+        android:text="Result will appear here"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#e0e0e0"
+        android:minHeight="60dp" />
+
+</RelativeLayout>
